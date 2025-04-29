@@ -7,8 +7,6 @@ app.use(cors());
 app.use(express.json());
 
 mongoose.connect('mongodb://127.0.0.1:27017/hotelDB', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
 }).then(() => console.log('MongoDB connected'));
 
 const User = mongoose.model('User', new mongoose.Schema({
